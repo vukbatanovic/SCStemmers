@@ -39,7 +39,7 @@ public void stemFile (String fileInput, String fileOutput)
 
 ### Weka
 Alternatively, the stemmers can be utilized as an unofficial plug-in module within Weka (Waikato Environment for Knowledge Analysis).
-To do so, download the [SCStemmers Weka package](https://github.com/vukbatanovic/SCStemmers/releases/download/SCStemmers_1.0.0.zip).
+To do so, download the [SCStemmers Weka package](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.0.0/SCStemmers_1.0.0.zip).
 Open the Weka package manager (available in Weka >= 3.7) and use the "Unofficial - File/URL" option to select and install SCStemmers.
 After restarting Weka, the list of available stemmers (within the StringToWordVector filter) will also contain the four stemmers from this package.
 
