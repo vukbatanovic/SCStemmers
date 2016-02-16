@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>SCStemmers by vukbatanovic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">SCStemmers</h1>
+      <h2 class="project-tagline">A collection of stemmers for Serbian and Croatian</h2>
+      <a href="https://github.com/vukbatanovic/SCStemmers" class="btn">View on GitHub</a>
+      <a href="https://github.com/vukbatanovic/SCStemmers/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/vukbatanovic/SCStemmers/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="scstemmers---a-collection-of-stemmers-for-serbian-and-croatian" class="anchor" href="#scstemmers---a-collection-of-stemmers-for-serbian-and-croatian" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SCStemmers - a collection of stemmers for Serbian and Croatian</h1>
+
+<p>This package is a Java reimplementation of four previously published stemming algorithms for Serbian and Croatian:</p>
+
+<ul>
+<li>The greedy and optimal subsumption-based stemmers for Serbian, by Vlado Kešelj and Danko Šipka (<a href="http://www.cs.dal.ca/%7Evlado/nlp/2007-sr/">originally written in Perl</a>)</li>
+<li>A refinement of the greedy subsumption-based stemmer, by Nikola Milošević (<a href="http://arxiv.org/abs/1209.4471">originally written in PHP</a>, <a href="https://nikolamilosevic86.github.io/SerbianStemmer/">later also made available in Python</a>)</li>
+<li>A "Simple stemmer for Croatian v0.1", by Nikola Ljubešić and Ivan Pandžić (<a href="http://nlp.ffzg.hr/resources/tools/stemmer-for-croatian/">originally written in Python</a>)</li>
+</ul>
+
+<h2>
+<a id="text-encoding" class="anchor" href="#text-encoding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Text Encoding</h2>
+
+<p>All stemmers expect the input text to be formatted in UTF-8. Their outputs are also UTF-8 encoded.</p>
+
+<p>Since Serbian is a digraphic language the input texts can be in either the Cyrillic or the Latin script. The stemmer for Croatian works only with texts in the Latin script.</p>
+
+<p>For the sake of consistency all stemmers produce output in the Latin script.</p>
+
+<h3>
+<a id="dual1-coding-system" class="anchor" href="#dual1-coding-system" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Dual1 Coding System</h3>
+
+<p>The stemmers for Serbian internally use the so-called <em>dual1</em> coding system in which only the Latin script characters without diacritical marks are allowed.
+To obtain dual1-coded texts all Cyrillic characters are first translated into their Latin script equivalents. Afterwards, all characters with diacritical marks are replaced in the following manner:</p>
+
+<ul>
+<li>
+<strong>Č/č</strong> is coded as <strong>Cx/cx</strong>
+</li>
+<li>
+<strong>Ć/ć</strong> is coded as <strong>Cy/cy</strong>
+</li>
+<li>
+<strong>Dž/dž</strong> is coded as <strong>Dx/dx</strong>
+</li>
+<li>
+<strong>Đ/đ</strong> is coded as <strong>Dy/dy</strong>
+</li>
+<li>
+<strong>Ž/ž</strong> is coded as <strong>Zx/zx</strong>
+</li>
+<li>
+<strong>Š/š</strong> is coded as <strong>Sx/sx</strong>
+</li>
+</ul>
+
+<p>The greedy and the optimal stemmers of Kešelj and Šipka (but not Milošević's refinement of the greedy stemmer) also apply the following:</p>
+
+<ul>
+<li>
+<strong>Lj/lj</strong> is coded as <strong>Ly/ly</strong>
+</li>
+<li>
+<strong>Nj/nj</strong> is coded as <strong>Ny/ny</strong>
+</li>
+</ul>
+
+<p>The stemmers for Serbian also accept texts in the dual1 coding as input, but will still produce the normal Latin script text as output.
+However, this behavior can easily be changed by applying the coding transformation methods, supplied within the <em>SerbianStemmer</em> class, to the output text.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>All stemmers can be used through the interface declared in the <em>SCStemmer</em> abstract class, via the methods:</p>
+
+<pre><code>public String stemWord (String word)
+public String stemLine (String line)
+public String stemText (String text)
+public void stemFile (String fileInput, String fileOutput)
+</code></pre>
+
+<h3>
+<a id="weka" class="anchor" href="#weka" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Weka</h3>
+
+<p>Alternatively, the stemmers can be utilized as an unofficial plug-in module within Weka (Waikato Environment for Knowledge Analysis).
+To do so, download the <a href="https://github.com/vukbatanovic/SCStemmers/releases/download/SCStemmers_1.0.0.zip">SCStemmers Weka package</a>.
+Open the Weka package manager (available in Weka &gt;= 3.7) and use the "Unofficial - File/URL" option to select and install SCStemmers.
+After restarting Weka, the list of available stemmers (within the StringToWordVector filter) will also contain the four stemmers from this package.</p>
+
+<h2>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h2>
+
+<p>If you wish to use this package in your paper or project, please include a reference to the following paper in which it was presented:</p>
+
+<p><strong><em>Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset</em></strong>, Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), Portorož, Slovenia (2016).</p>
+
+<p>Be sure to also cite the original paper of each stemmer you use:</p>
+
+<ul>
+<li>For the greedy and optimal subsumption-based stemmers for Serbian: <em><a href="http://infoteka.bg.ac.rs/pdf/Eng/2008/INFOTHECA_IX_1-2_May2008_23a-33a.pdf">A Suffix Subsumption-Based Approach to Building Stemmers and Lemmatizers for Highly Inflectional Languages with Sparse Resources</a></em>, Vlado Kešelj, Danko Šipka, Infotheca 9(1-2), 23a-33a (2008).</li>
+<li>For the refinement of the greedy subsumption-based stemmer: <em><a href="http://arxiv.org/abs/1209.4471">Stemmer for Serbian language</a></em>, Nikola Milošević, arXiv preprint arXiv:1209.4471 (2012).</li>
+<li>For the "Simple stemmer for Croatian v0.1": <em><a href="http://nlp.ffzg.hr/data/publications/nljubesi/ljubesic07-retrieving.pdf">Retrieving Information in Croatian: Building a Simple and Efficient Rule-Based Stemmer</a></em>, Nikola Ljubešić, Damir Boras, Ozren Kubelka, Digital Information and Heritage, 313–320 (2007).</li>
+</ul>
+
+<h2>
+<a id="additional-documentation" class="anchor" href="#additional-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Additional Documentation</h2>
+
+<p>All classes and non-trivial methods contain extensive documentation and comments, in both Serbian and English.
+If you have any questions about the stemmers' functioning, please review the supplied javadoc documentation, the source code, and the papers listed above.
+If no answer can be found, feel free to contact me at bv115045p/at/student.etf.bg.ac.rs</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>GNU General Public License 3.0 (GNU GPL 3.0)</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/vukbatanovic/SCStemmers">SCStemmers</a> is maintained by <a href="https://github.com/vukbatanovic">vukbatanovic</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
