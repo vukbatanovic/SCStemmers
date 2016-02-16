@@ -1,5 +1,4 @@
 # Description file for SCStemmers
-#
 
 # Package name (required)
 PackageName=SCStemmers
@@ -11,7 +10,7 @@ Version=1.0.0
 Date=2016-02-15
 
 # Title (required)
-Title=A collection of algorithms which perform stemming on words in Serbian or Croatian.
+Title=A collection of stemmers for Serbian and Croatian.
 
 Category=Preprocessing
 
