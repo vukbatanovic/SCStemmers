@@ -6,7 +6,7 @@ import java.util.HashMap;
  * <p>
  * Ova klasa implementira stemer za srpski kreiran u master radu Nikole Miloševića, opisan u ArXiv dokumentu:
  * <br>
- * "Stemmer for Serbian language", Nikola Milošević, arXiv preprint arXiv:1209.4471 (2012)
+ * Stemmer for Serbian language, Nikola Milošević, arXiv preprint arXiv:1209.4471 (2012).
  * <br>
  * <a href="http://arxiv.org/abs/1209.4471">http://arxiv.org/abs/1209.4471</a>
  * </p>
@@ -21,7 +21,7 @@ import java.util.HashMap;
  * <p><i>
  * This class implements the stemmer created in the Master's degree thesis of Nikola Milošević, described in the ArXiv paper:
  * <br>
- * "Stemmer for Serbian language", Nikola Milošević, arXiv preprint arXiv:1209.4471 (2012)
+ * Stemmer for Serbian language, Nikola Milošević, arXiv preprint arXiv:1209.4471 (2012).
  * <br>
  * <a href="http://arxiv.org/abs/1209.4471">http://arxiv.org/abs/1209.4471</a>
  * </i></p>
@@ -35,7 +35,7 @@ import java.util.HashMap;
  * 
  * @author Vuk Batanović 
  * <br>
- * @see "Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset", Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), Portorož, Slovenia. (2016)
+ * @see <i>Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset</i>, Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), pp. 2688-2696, Portorož, Slovenia (2016).
  * <br>
  * https://github.com/vukbatanovic/SCStemmers
  * <br>

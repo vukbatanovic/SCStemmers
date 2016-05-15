@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * <p>
  * Stemer predstavlja poboljšanje ranijeg algoritma opisanog u radu:
  * <br>
- * "Retrieving Information in Croatian: Building a Simple and Efficient Rule-Based Stemmer", Nikola Ljubešić, Damir Boras, Ozren Kubelka, Digital Information and Heritage, 313–320. (2007)
+ * Retrieving Information in Croatian: Building a Simple and Efficient Rule-Based Stemmer, Nikola Ljubešić, Damir Boras, Ozren Kubelka, Digital Information and Heritage, 313–320 (2007).
  * </p>
  * <br>
  * <p><i>
@@ -26,12 +26,12 @@ import java.util.regex.Pattern;
  * <p><i>
  * The stemmer represents an improvement of an earlier algorithm described in the paper:
  * <br>
- * "Retrieving Information in Croatian: Building a Simple and Efficient Rule-Based Stemmer", Nikola Ljubešić, Damir Boras, Ozren Kubelka, Digital Information and Heritage, 313–320. (2007)
+ * Retrieving Information in Croatian: Building a Simple and Efficient Rule-Based Stemmer, Nikola Ljubešić, Damir Boras, Ozren Kubelka, Digital Information and Heritage, 313–320 (2007).
  * </i></p>
  * 
  * @author Vuk Batanović
  * <br>
- * @see "Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset", Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), Portorož, Slovenia. (2016)
+ * @see <i>Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset</i>, Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), pp. 2688-2696, Portorož, Slovenia (2016).
  * <br>
  * https://github.com/vukbatanovic/SCStemmers
  * <br>

@@ -46,7 +46,7 @@ After restarting Weka, the list of available stemmers (within the StringToWordVe
 ## References
 If you wish to use this package in your paper or project, please include a reference to the following paper in which it was presented:
 
-***Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset***, Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), Portorož, Slovenia (2016).
+**[Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset](http://www.lrec-conf.org/proceedings/lrec2016/pdf/284_Paper.pdf)**, Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), pp. 2688-2696, Portorož, Slovenia (2016).
 
 Be sure to also cite the original paper of each stemmer you use:
 * For the greedy and optimal subsumption-based stemmers for Serbian: *[A Suffix Subsumption-Based Approach to Building Stemmers and Lemmatizers for Highly Inflectional Languages with Sparse Resources](http://infoteka.bg.ac.rs/pdf/Eng/2008/INFOTHECA_IX_1-2_May2008_23a-33a.pdf)*, Vlado Kešelj, Danko Šipka, Infotheca 9(1-2), 23a-33a (2008).
@@ -56,7 +56,7 @@ Be sure to also cite the original paper of each stemmer you use:
 ## Additional Documentation
 All classes and non-trivial methods contain extensive documentation and comments, in both Serbian and English.
 If you have any questions about the stemmers' functioning, please review the supplied javadoc documentation, the source code, and the papers listed above.
-If no answer can be found, feel free to contact me at bv115045p / at / student.etf.bg.ac.rs
+If no answer can be found, feel free to contact me at: bv115045p / at / student.etf.bg.ac.rs
 
 ## License
 GNU General Public License 3.0 (GNU GPL 3.0)

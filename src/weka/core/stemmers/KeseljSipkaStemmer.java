@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
  * <p>
  * Ova apstraktna klasa implementira zajedničke funkcije za stemere za srpski opisane u radu:
  * <br>
- * "Pristup izgradnji stemera i lematizora za jezike s bogatom fleksijom i oskudnim resursima zasnovan na obuhvatanju sufiksa", Vlado Kešelj, Danko Šipka, Infoteka 9(1-2), 21-31. (2008)
+ * Pristup izgradnji stemera i lematizora za jezike s bogatom fleksijom i oskudnim resursima zasnovan na obuhvatanju sufiksa, Vlado Kešelj, Danko Šipka, Infoteka 9(1-2), 21-31 (2008).
  * <br> 
  * <a href="http://infoteka.bg.ac.rs/pdf/Srp/2008/04%20Vlado-Danko_Stemeri.pdf">http://infoteka.bg.ac.rs/pdf/Srp/2008/04%20Vlado-Danko_Stemeri.pdf</a>
  * <br>
@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
  * <p>
  * <i>This abstract class implements the common functions of the stemmers for Serbian described in the paper:</i>
  * <br>
- * <i>"A Suffix Subsumption-Based Approach to Building Stemmers and Lemmatizers for Highly Inflectional Languages with Sparse Resources", Vlado Kešelj, Danko Šipka, Infotheca 9(1-2), 23a-33a. (2008)</i>
+ * <i>A Suffix Subsumption-Based Approach to Building Stemmers and Lemmatizers for Highly Inflectional Languages with Sparse Resources, Vlado Kešelj, Danko Šipka, Infotheca 9(1-2), 23a-33a (2008).</i>
  * <br>
  * <i><a href="http://infoteka.bg.ac.rs/pdf/Eng/2008/INFOTHECA_IX_1-2_May2008_23a-33a.pdf">http://infoteka.bg.ac.rs/pdf/Eng/2008/INFOTHECA_IX_1-2_May2008_23a-33a.pdf</a></i>
  * <br>
@@ -33,7 +33,7 @@ import java.util.regex.Pattern;
  * </p>
  * @author Vuk Batanović
  * <br>
- * @see "Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset", Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), Portorož, Slovenia. (2016)
+ * @see <i>Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset</i>, Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), pp. 2688-2696, Portorož, Slovenia (2016).
  * <br>
  * https://github.com/vukbatanovic/SCStemmers
  * <br>
