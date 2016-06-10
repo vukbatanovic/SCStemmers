@@ -1,8 +1,10 @@
 package weka.core.stemmers;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.regex.Pattern;
 
@@ -100,23 +102,20 @@ public abstract class SCStemmer implements weka.core.stemmers.Stemmer {
 	 * <br><i>The name of the input file</i>
 	 * @param fileOutput Ime izlaznog fajla
 	 * <br><i>The name of the output file</i>
+	 * @throws IOException Označava grešku pri radu sa fajlom
+	 * <br><i>Signals an error during file operation</i>
 	 */
-	public void stemFile (String fileInput, String fileOutput) {
-		try {
-			BufferedReader br = new BufferedReader (new FileReader(fileInput));
-			PrintWriter pw = new PrintWriter (fileOutput);
-			String line = null;
-			while ((line = br.readLine()) != null) {
-				String stemmed = stemLine(line);
-				pw.println(stemmed);
-			}
-			br.close();
-			pw.flush();
-			pw.close();
+	public void stemFile (String fileInput, String fileOutput) throws IOException {
+		BufferedReader br = new BufferedReader  (new InputStreamReader(new FileInputStream(fileInput), "UTF-8"));
+		PrintWriter pw = new PrintWriter (fileOutput, "UTF-8");
+		String line = null;
+		while ((line = br.readLine()) != null) {
+			String stemmed = stemLine(line);
+			pw.println(stemmed);
 		}
-		catch (IOException e) {
-			System.out.println(e);
-		}
+		br.close();
+		pw.flush();
+		pw.close();
 	}
 	
 	/**
@@ -125,4 +124,47 @@ public abstract class SCStemmer implements weka.core.stemmers.Stemmer {
 	 * <i>Initializes the stemming rules</i>
 	 */
 	protected abstract void initRules ();
+	
+	/**
+	 * Ispisuje uputstvo za korišćenje SCStemmers paketa iz komandne linije
+	 * <p>
+	 * <i>Prints the instructions for using the SCStemmers package from the command line</i>
+	 */
+	private static void printCorrectUsage () {
+		System.out.println("Stemmers from this library can be properly invoked by:");
+		System.out.println("java -jar SCStemmers.jar StemmerID InputFile OutputFile\n");
+		System.out.println("where StemmerID is a number identifying the stemming algorithm:");
+		System.out.println("1 - Keselj & Sipka - Greedy");
+		System.out.println("2 - Keselj & Sipka - Optimal");
+		System.out.println("3 - Milosevic");
+		System.out.println("4 - Ljubesic & Pandzic");
+		System.out.println("InputFile is the path of the TXT file encoded in UTF-8 that is to be stemmed.");
+		System.out.println("The stemmed text will be placed in the file determined by the OutputFile argument.");
+		System.exit(0);
+	}
+	
+	public static void main (String [] args) {
+		try {
+			if (args.length != 3)
+				throw new Exception();
+			int stemmerID = Integer.parseInt(args[0]);
+			if (stemmerID > 4 || stemmerID < 1)
+				throw new Exception();
+			SCStemmer stemmer;
+			switch(stemmerID) {
+				case 1: stemmer = new KeseljSipkaStemmerGreedy(); break;
+				case 2: stemmer = new KeseljSipkaStemmerOptimal(); break;
+				case 3: stemmer = new MilosevicStemmer(); break;
+				case 4: default: stemmer = new LjubesicPandzicStemmer(); break;
+			}
+			stemmer.stemFile(args[1], args[2]);
+			System.out.println("Stemming successfully completed!");
+		}
+		catch (IOException e) {
+			System.out.println(e);
+		}
+		catch (Exception e) {
+			printCorrectUsage();
+		}
+	}
 }

@@ -29,13 +29,26 @@ The stemmers for Serbian also accept texts in the dual1 coding as input, but wil
 However, this behavior can easily be changed by applying the coding transformation methods, supplied within the *SerbianStemmer* class, to the output text.
 
 ## Usage
-All stemmers can be used through the interface declared in the *SCStemmer* abstract class, via the methods:
+All stemmers can be used in a program through the interface declared in the *SCStemmer* abstract class, via the methods:
 ```
 public String stemWord (String word)
 public String stemLine (String line)
 public String stemText (String text)
 public void stemFile (String fileInput, String fileOutput)
 ```
+
+### Command-line interface
+The supplied [SCStemmers.jar](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.0.0/SCStemmers.jar) file makes it possible to stem the contents of textual files using the command line. Stemmers from the SCStemmers package can be invoked by the following command:
+```
+java -jar SCStemmers.jar StemmerID InputFile OutputFile
+```
+where *StemmerID* is a number identifying the stemming algorithm:
+* 1 - Kešelj & Šipka - Greedy
+* 2 - Kešelj & Šipka - Optimal
+* 3 - Milošević
+* 4 - Ljubešić & Pandžić
+
+*InputFile* is the path of the TXT file encoded in UTF-8 that is to be stemmed. The stemmed text will be placed in the file determined by the *OutputFile* argument.
 
 ### Weka
 Alternatively, the stemmers can be utilized as an unofficial plug-in module within Weka (Waikato Environment for Knowledge Analysis).
