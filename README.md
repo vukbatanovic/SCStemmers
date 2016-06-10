@@ -1,6 +1,6 @@
 ﻿# SCStemmers - a collection of stemmers for Serbian and Croatian
 This package is a Java reimplementation of four previously published stemming algorithms for Serbian and Croatian:
-* The greedy and optimal subsumption-based stemmers for Serbian, by Vlado Kešelj and Danko Šipka ([originally written in Perl](http://www.cs.dal.ca/~vlado/nlp/2007-sr/))
+* The greedy and the optimal subsumption-based stemmer for Serbian, by Vlado Kešelj and Danko Šipka ([originally written in Perl](http://www.cs.dal.ca/~vlado/nlp/2007-sr/))
 * A refinement of the greedy subsumption-based stemmer, by Nikola Milošević ([originally written in PHP](http://arxiv.org/abs/1209.4471), [later also made available in Python](https://nikolamilosevic86.github.io/SerbianStemmer/))
 * A "Simple stemmer for Croatian v0.1", by Nikola Ljubešić and Ivan Pandžić ([originally written in Python](http://nlp.ffzg.hr/resources/tools/stemmer-for-croatian/))
 
