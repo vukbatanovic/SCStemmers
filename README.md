@@ -62,7 +62,7 @@ If you wish to use this package in your paper or project, please include a refer
 **[Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset](http://www.lrec-conf.org/proceedings/lrec2016/pdf/284_Paper.pdf)**, Vuk Batanović, Boško Nikolić, Milan Milosavljević, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), pp. 2688-2696, Portorož, Slovenia (2016).
 
 Be sure to also cite the original paper of each stemmer you use:
-* For the greedy and optimal subsumption-based stemmers for Serbian: *[A Suffix Subsumption-Based Approach to Building Stemmers and Lemmatizers for Highly Inflectional Languages with Sparse Resources](http://infoteka.bg.ac.rs/pdf/Eng/2008/INFOTHECA_IX_1-2_May2008_23a-33a.pdf)*, Vlado Kešelj, Danko Šipka, Infotheca 9(1-2), 23a-33a (2008).
+* For the greedy and the optimal subsumption-based stemmer for Serbian: *[A Suffix Subsumption-Based Approach to Building Stemmers and Lemmatizers for Highly Inflectional Languages with Sparse Resources](http://infoteka.bg.ac.rs/pdf/Eng/2008/INFOTHECA_IX_1-2_May2008_23a-33a.pdf)*, Vlado Kešelj, Danko Šipka, Infotheca 9(1-2), 23a-33a (2008).
 * For the refinement of the greedy subsumption-based stemmer: *[Stemmer for Serbian language](http://arxiv.org/abs/1209.4471)*, Nikola Milošević, arXiv preprint arXiv:1209.4471 (2012).
 * For the "Simple stemmer for Croatian v0.1": *[Retrieving Information in Croatian: Building a Simple and Efficient Rule-Based Stemmer](http://nlp.ffzg.hr/data/publications/nljubesi/ljubesic07-retrieving.pdf)*, Nikola Ljubešić, Damir Boras, Ozren Kubelka, Digital Information and Heritage, 313–320 (2007).
 
