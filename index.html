@@ -13,7 +13,6 @@
     <section class="page-header">
       <h1 class="project-name">SCStemmers</h1>
       <h2 class="project-tagline">A collection of stemmers for Serbian and Croatian</h2>
-	  <h2 class="project-tagline"><i><b>Stemeri za srpski i hrvatski</b></i></h2>
       <a href="https://github.com/vukbatanovic/SCStemmers" class="btn">View on GitHub</a>
       <a href="https://github.com/vukbatanovic/SCStemmers/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/vukbatanovic/SCStemmers/tarball/master" class="btn">Download .tar.gz</a>
@@ -84,13 +83,32 @@ However, this behavior can easily be changed by applying the coding transformati
 <h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>All stemmers can be used through the interface declared in the <em>SCStemmer</em> abstract class, via the methods:</p>
+<p>All stemmers can be used in a program through the interface declared in the <em>SCStemmer</em> abstract class, via the methods:</p>
 
 <pre><code>public String stemWord (String word)
 public String stemLine (String line)
 public String stemText (String text)
 public void stemFile (String fileInput, String fileOutput)
 </code></pre>
+
+<h3>
+<a id="command-line-interface" class="anchor" href="#command-line-interface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Command-line interface</h3>
+
+<p>The supplied <a href="https://github.com/vukbatanovic/SCStemmers/releases/download/v1.0.0/SCStemmers.jar">SCStemmers.jar</a> file makes it possible to stem the contents of textual files using the command line. Stemmers from the SCStemmers package can be invoked by the following command:</p>
+
+<pre><code>java -jar SCStemmers.jar StemmerID InputFile OutputFile
+</code></pre>
+
+<p>where <em>StemmerID</em> is a number identifying the stemming algorithm:</p>
+
+<ul>
+<li>1 - Kešelj &amp; Šipka - Greedy</li>
+<li>2 - Kešelj &amp; Šipka - Optimal</li>
+<li>3 - Milošević</li>
+<li>4 - Ljubešić &amp; Pandžić</li>
+</ul>
+
+<p><em>InputFile</em> is the path of the TXT file encoded in UTF-8 that is to be stemmed. The stemmed text will be placed in the file determined by the <em>OutputFile</em> argument.</p>
 
 <h3>
 <a id="weka" class="anchor" href="#weka" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Weka</h3>
@@ -119,8 +137,8 @@ After restarting Weka, the list of available stemmers (within the StringToWordVe
 <a id="additional-documentation" class="anchor" href="#additional-documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Additional Documentation</h2>
 
 <p>All classes and non-trivial methods contain extensive documentation and comments, in both Serbian and English.
-If you have any questions about the stemmers' functioning, please review the supplied <a href="doc/index.html">javadoc documentation</a>, the source code, and the papers listed above.
-If no answer can be found, feel free to contact me at bv115045p / at / student.etf.bg.ac.rs</p>
+If you have any questions about the stemmers' functioning, please review the supplied javadoc documentation, the source code, and the papers listed above.
+If no answer can be found, feel free to contact me at: bv115045p / at / student.etf.bg.ac.rs</p>
 
 <h2>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
