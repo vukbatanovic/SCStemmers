@@ -69,7 +69,7 @@ Be sure to also cite the original paper of each stemmer you use:
 ## Additional Documentation
 All classes and non-trivial methods contain extensive documentation and comments, in both Serbian and English.
 If you have any questions about the stemmers' functioning, please review the supplied javadoc documentation, the source code, and the papers listed above.
-If no answer can be found, feel free to contact me at: bv115045p / at / student.etf.bg.ac.rs
+If no answer can be found, feel free to contact me at: vuk.batanovic / at / student.etf.bg.ac.rs
 
 ## License
 GNU General Public License 3.0 (GNU GPL 3.0)
