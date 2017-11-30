@@ -199,6 +199,6 @@ public abstract class KeseljSipkaStemmer extends SerbianStemmer  {
             case 'ш': return "sx";                         
             case 'Ш': return "Sy";         
         }
-     return "";   
+     return Character.toString(ch);
 	}
 }

@@ -271,7 +271,7 @@ public class MilosevicStemmer extends SerbianStemmer {
             case 'Ш': return "Sy";   
             
         }
-     return "";   
+     return Character.toString(ch);
 }
 	
 	/**
