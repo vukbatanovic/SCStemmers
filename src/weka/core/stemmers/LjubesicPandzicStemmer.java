@@ -87,6 +87,7 @@ public class LjubesicPandzicStemmer extends SCStemmer {
 	 */
 	@Override
 	public String stemWord(String word) {
+		word = convertCyrrilicToLatinString(word);
 		if (stopset.contains(word.toLowerCase()))
 			return word;
 		String stemmed = transform(word);
@@ -157,6 +158,81 @@ public class LjubesicPandzicStemmer extends SCStemmer {
 	private boolean hasAVowel (String word) {
 		Matcher matcher = vowelPattern.matcher(capitalizeSyllabicR(word));
 		return matcher.find();
+	}
+	
+	private String convertCyrrilicToLatinString (String wordOrLine) {
+		StringBuffer sb = new StringBuffer();
+        for (int i=0; i<wordOrLine.length(); i++) {
+        	char ch = wordOrLine.charAt(i);
+        	sb.append(convertCyrillicToLatinCharacter(ch));
+        }
+        return sb.toString();
+	}
+	
+	private String convertCyrillicToLatinCharacter (char character) {
+        switch (character) {
+            case 'а': return "a";
+            case 'А': return "A";
+            case 'б': return "b";
+            case 'Б': return "B";
+            case 'в': return "v";
+            case 'В': return "V";
+            case 'г': return "g";
+            case 'Г': return "G";
+            case 'д': return "d";
+            case 'Д': return "D";
+            case 'ђ': return "đ";
+            case 'Ђ': return "Đ";
+            case 'е': return "e"; 
+            case 'Е': return "E";
+            case 'ж': return "ž";
+            case 'Ж': return "Ž";   
+            case 'з': return "z";
+            case 'З': return "Z";
+            case 'и': return "i";
+            case 'И': return "I";    
+            case 'ј': return "j";    
+            case 'Ј': return "J";    
+            case 'к': return "k";    
+            case 'К': return "K";    
+            case 'л': return "l";   
+            case 'Л': return "L";    
+            case 'љ': return "lj";
+            case 'Љ': return "Lj";    
+            case 'м': return "m";    
+            case 'М': return "M";    
+            case 'н': return "n";    
+            case 'Н': return "N";    
+            case 'њ': return "nj";    
+            case 'Њ': return "Nj";
+            case 'о': return "o";    
+            case 'О': return "O";    
+            case 'п': return "p";    
+            case 'П': return "P";    
+            case 'р': return "r";
+            case 'Р': return "R";    
+            case 'с': return "s";    
+            case 'С': return "S";    
+            case 'т': return "t";    
+            case 'Т': return "T";    
+            case 'ћ': return "ć";
+            case 'Ћ': return "Ć";    
+            case 'у': return "u";    
+            case 'У': return "U";    
+            case 'ф': return "f";    
+            case 'Ф': return "F";    
+            case 'х': return "h";
+            case 'Х': return "H"; 
+            case 'ц': return "c";
+            case 'Ц': return "C";     
+            case 'ч': return "č";                
+            case 'Ч': return "Č";                         
+            case 'џ': return "dž";                         
+            case 'Џ': return "Dž";                         
+            case 'ш': return "š";                         
+            case 'Ш': return "Š";       
+            default: return Character.toString(character);
+        }
 	}
 	
 	protected void initRules() {
