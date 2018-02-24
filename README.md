@@ -7,9 +7,7 @@ This package is a Java reimplementation of four previously published stemming al
 ## Text Encoding
 All stemmers expect the input text to be formatted in UTF-8. Their outputs are also UTF-8 encoded.
 
-Since Serbian is a digraphic language the input texts can be in either the Cyrillic or the Latin script. The stemmer for Croatian works only with texts in the Latin script.
-
-For the sake of consistency all stemmers produce output in the Latin script.
+Since Serbian is a digraphic language the input texts can be in either the Cyrillic or the Latin script. All stemmers produce output in the Latin script.
 
 ### Dual1 Coding System
 The stemmers for Serbian internally use the so-called *dual1* coding system in which only the Latin script characters without diacritical marks are allowed.
@@ -38,7 +36,7 @@ public void stemFile (String fileInput, String fileOutput)
 ```
 
 ### Command-line interface
-The supplied [SCStemmers.jar](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.0.0/SCStemmers.jar) file makes it possible to stem the contents of textual files using the command line. Stemmers from the SCStemmers package can be invoked by the following command:
+The supplied [SCStemmers.jar](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.0/SCStemmers.jar) file makes it possible to stem the contents of textual files using the command line. Stemmers from the SCStemmers package can be invoked by the following command:
 ```
 java -jar SCStemmers.jar StemmerID InputFile OutputFile
 ```
@@ -52,7 +50,7 @@ where *StemmerID* is a number identifying the stemming algorithm:
 
 ### Weka
 Alternatively, the stemmers can be utilized as an unofficial plug-in module within Weka (Waikato Environment for Knowledge Analysis).
-To do so, download the [SCStemmers Weka package](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.0.0/SCStemmers_1.0.0.zip).
+To do so, download the [SCStemmers Weka package](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.0/SCStemmers_1.1.0.zip).
 Open the Weka package manager (available in Weka >= 3.7) and use the "Unofficial - File/URL" option to select and install SCStemmers.
 After restarting Weka, the list of available stemmers (within the StringToWordVector filter) will also contain the four stemmers from this package.
 
