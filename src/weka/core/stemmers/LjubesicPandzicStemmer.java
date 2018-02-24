@@ -87,7 +87,7 @@ public class LjubesicPandzicStemmer extends SCStemmer {
 	 */
 	@Override
 	public String stemWord(String word) {
-		word = convertCyrrilicToLatinString(word);
+		word = convertCyrillicToLatinString(word);
 		if (stopset.contains(word.toLowerCase()))
 			return word;
 		String stemmed = transform(word);
@@ -160,7 +160,7 @@ public class LjubesicPandzicStemmer extends SCStemmer {
 		return matcher.find();
 	}
 	
-	private String convertCyrrilicToLatinString (String wordOrLine) {
+	private String convertCyrillicToLatinString (String wordOrLine) {
 		StringBuffer sb = new StringBuffer();
         for (int i=0; i<wordOrLine.length(); i++) {
         	char ch = wordOrLine.charAt(i);
