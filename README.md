@@ -36,7 +36,7 @@ public void stemFile (String fileInput, String fileOutput)
 ```
 
 ### Command-line interface
-The supplied [SCStemmers.jar](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.0/SCStemmers.jar) file makes it possible to stem the contents of textual files using the command line. Stemmers from the SCStemmers package can be invoked by the following command:
+The supplied [SCStemmers.jar](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.1/SCStemmers.jar) file makes it possible to stem the contents of textual files using the command line. Stemmers from the SCStemmers package can be invoked by the following command:
 ```
 java -jar SCStemmers.jar StemmerID InputFile OutputFile
 ```
@@ -50,7 +50,7 @@ where *StemmerID* is a number identifying the stemming algorithm:
 
 ### Weka
 Alternatively, the stemmers can be utilized as an unofficial plug-in module within Weka (Waikato Environment for Knowledge Analysis).
-To do so, download the [SCStemmers Weka package](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.0/SCStemmers_1.1.0.zip).
+To do so, download the [SCStemmers Weka package](https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.1/SCStemmers_1.1.1.zip).
 Open the Weka package manager (available in Weka >= 3.7) and use the "Unofficial - File/URL" option to select and install SCStemmers.
 After restarting Weka, the list of available stemmers (within the StringToWordVector filter) will also contain the four stemmers from this package.
 

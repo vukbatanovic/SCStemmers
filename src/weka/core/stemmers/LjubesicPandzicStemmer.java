@@ -128,7 +128,7 @@ public class LjubesicPandzicStemmer extends SCStemmer {
 	private String transform (String word) {
 		for (String key: transformations.keySet())
 			if (word.endsWith(key))
-				return word.replace(key, transformations.get(key));
+				return word.substring(0, word.length()-key.length()) + transformations.get(key);
 		return word;
 	}
 	

@@ -4,10 +4,10 @@
 PackageName=SCStemmers
 
 # Version (required)
-Version=1.1.0
+Version=1.1.1
 
 # Date
-Date=2018-02-24
+Date=2018-10-16
 
 # Title (required)
 Title=A collection of stemmers for Serbian and Croatian.
@@ -27,7 +27,7 @@ License=GPL 3.0
 Description=This package contains Java implementations of three previously published stemmers for Serbian - two of them by Keselj and Sipka, one by Milosevic - and one for Croatian by Ljubesic and Pandzic. All stemmers require the input text to be in UTF-8. The stemmers accept text in both the Cyrillic and Latin scripts as input, and give the output in the Latin script. Performance comparisons between the stemmers (on the task of sentiment analysis) can be found in the paper "Reliable Baselines for Sentiment Analysis in Resource-Limited Languages: The Serbian Movie Review Dataset," Vuk Batanovic, Bosko Nikolic, Milan Milosavljevic, in Proceedings of the 10th International Conference on Language Resources and Evaluation (LREC 2016), pp. 2688-2696, Portoroz, Slovenia (2016). See the webpage for the list of reference papers and more information.
 
 # Package URL for obtaining the package archive (required)
-PackageURL=https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.0/SCStemmers_1.1.0.zip
+PackageURL=https://github.com/vukbatanovic/SCStemmers/releases/download/v1.1.1/SCStemmers_1.1.1.zip
 
 # URL for further information
 URL=https://github.com/vukbatanovic/SCStemmers/
